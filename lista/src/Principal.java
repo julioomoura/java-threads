@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Vector;
 
 public class Principal {
     public static void main(String[] args) throws InterruptedException {
-        List<String> lista = Collections.synchronizedList(new ArrayList<>());
+//        List<String> lista = Collections.synchronizedList(new ArrayList<>());
+        List<String> lista = new Vector();
 
         for (int i = 0; i < 10; i++) {
             new Thread(new TarefaAdicionarElemento(lista, i)).start();
