@@ -3,11 +3,13 @@ public class Principal {
         Banheiro banheiro = new Banheiro();
         Thread convidado1 = new Thread(new TarefaNumero1(banheiro), "José");
         Thread convidado2 = new Thread(new TarefaNumero2(banheiro), "Zé");
-        Thread convidado3 = new Thread(new TarefaNumero1(banheiro), "João");
-        Thread convidado4 = new Thread(new TarefaNumero2(banheiro), "Zeca");
+        Thread limpeza = new Thread(new TarefaLimpeza(banheiro), "Limpeza");
+//        Thread convidado3 = new Thread(new TarefaNumero1(banheiro), "João");
+//        Thread convidado4 = new Thread(new TarefaNumero2(banheiro), "Zeca");
         convidado1.start();
         convidado2.start();
-        convidado3.start();
-        convidado4.start();
+        limpeza.start();
+//        convidado3.start();
+//        convidado4.start();
     }
 }
